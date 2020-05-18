@@ -1,12 +1,31 @@
-frames 100
-basename simple_100
-constants brass 0.329412 0.780392 0.992157 0.223529 0.568627 0.941176 0.027451 0.113725 0.807843
+frames 50
+constants black 0 0 0 0 0 0 0 0 0
+constants red 0.7 0.6 1 0 0 0 0 0 0
+constants green 0 0 0 0.7 0.6 1 0 0 0
+constants blue 0 0 0 0 0 0 0.7 0.6 1
+constants yellow 0.7 0.6 1 0.7 0.6 1 0 0 0
 push
 move 250 250 0
-scale 2 2 2 bigenator
-rotate y 360 spinny
-rotate z 360 spinny
-torus brass 0 0 0 75 125
-vary spinny 0 99 0 1
-vary bigenator 0 49 0 1
-vary bigenator 50 99 1 0
+push
+sphere red 0 0 0 50
+pop
+push
+rotate z 360 s1
+sphere black 0 75 0 10
+pop
+push
+rotate z 360 s2
+sphere green 0 150 0 15
+pop
+push
+rotate z 360 s3
+sphere blue 0 200 0 20
+pop
+push
+rotate z 360 s4
+sphere yellow 0 250 0 25
+pop
+vary s1 0 49 0 1
+vary s2 0 49 0 2
+vary s3 0 49 0 3
+vary s4 0 49 0 4
